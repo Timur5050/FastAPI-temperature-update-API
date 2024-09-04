@@ -10,16 +10,15 @@ engine = create_engine(
     connect_args={"check_same_thread": False}
 )
 async_engine = create_async_engine(
-    settings.ASYNC_DATABASE_URL,
-    connect_args={"check_same_thread": False}
+    settings.ASYNC_DATABASE_URL
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 AsyncSessionLocal = sessionmaker(
+    bind=async_engine,
+    class_=AsyncSession,
     autocommit=False,
-    autoflush=False,
-    bind=engine,
-    class_=AsyncSession
+    autoflush=False
 )
 
 Base = declarative_base()
