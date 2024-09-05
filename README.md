@@ -1,3 +1,5 @@
+# Welcome
+
 This FastAPI application provides a comprehensive solution for managing city and temperature data. It consists of two main components:
 
 City CRUD API: Manage city data with endpoints to create, read, update, and delete city records. The City model includes fields for id, name, and additional_info, with data stored in a SQLite database.
