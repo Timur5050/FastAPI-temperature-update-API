@@ -49,3 +49,4 @@ curl -X GET "http://localhost:8000/temperatures/"
 # Get Temperatures by City: GET /temperatures/?city_id={city_id}
 curl -X GET "http://localhost:8000/temperatures/{city_id}/"
 ```
+
